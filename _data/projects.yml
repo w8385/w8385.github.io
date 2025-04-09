@@ -1,30 +1,96 @@
 deploying:
   - title: My.solved
-    link: https://my-solved.github.io
+    overview: 보다 편한 PS/CP를 위한 앱. 대회 일정과 알림을 곁들인.
+
     image: /assets/img/projects/mysolved.png
+    link: https://my-solved.github.io
+    repo: https://github.com/My-solved/My.solved
+
+    techs:
+      - Flutter
+
+    started: 2022-11
+
+    description:
+      Flutter로 만든 PS/CP 대회 일정 알림 앱입니다.
+      대회 일정과 알림을 제공하며, 문제 풀이를 위한 다양한 기능을 제공합니다.
+      현재는 iOS와 Android 모두 지원합니다.
 
 developing:
-  - title: Code Poker
-    link: https://github.com/Code-Poker
-    image: /assets/img/projects/codepoker.png
-
   - title: Poké Bowl
-    link: https://github.com/w8385/poke-bowl
+    overview: 포켓몬 생활을 도울 유틸 서비스
+
     image: /assets/img/projects/poke-bowl.png
+    repo: https://github.com/w8385/poke-bowl
+
+    techs:
+      - NestJS
+      - PostgreSQL
+
+    started: 2025-03
 
   - title: bibimbap
-    link: https://github.com/Bibimbap-Team
+    overview: 알고리즘 문제 검수 시스템
+
     image: /assets/img/projects/bibimbap.png
+    repo: https://github.com/Bibimbap-Team
+
+    techs:
+      - Rust
+      - PostgreSQL
+
+    started: 2024-07
+
+  - title: Code Poker
+    overview: 교내 보드게임 벌점 관리 시스템
+
+    image: /assets/img/projects/codepoker.png
+    repo: https://github.com/Code-Poker
+
+    techs:
+      - NestJS
+      - MongoDB
+
+    started: 2024-01
 
 ended:
-  - title: DF CAT
-    link: https://github.com/DF-CAT
-    image: /assets/img/projects/dfcat.png
+  - title: sumtime
+    overview: 모임 통장 회계 관리 서비스
+
+    image: /assets/img/projects/sumtime.jpg
+    repo: https://github.com/bo-an-bo
+
+    techs:
+      - NestJS
+      - MongoDB
+
+    started: 2024-04
+    ended: 2023-06
 
   - title: 숏과외
-    link: https://github.com/amicably-until-the-end
-    image: /assets/img/projects/shorttutoring.png
+    overview: 실시간 영상 과외 플랫폼
 
-  - title: sumtime
-    link: https://github.com/bo-an-bo
-    image: /assets/img/projects/sumtime.jpg
+    image: /assets/img/projects/shorttutoring.png
+    repo: https://github.com/amicably-until-the-end
+
+    techs:
+      - NestJS
+      - DynamoDB
+      - S3
+
+    started: 2023-05
+    ended: 2023-10
+
+  - title: DF CAT
+    overview: 디지털포렌식 관점에서의 정보 유출 대응 프레임워크
+
+    image: /assets/img/projects/dfcat.png
+    repo: https://github.com/DF-CAT
+
+    techs:
+      - NestJS
+      - RDS
+      - S3
+
+    started: 2022-10
+    ended: 2023-02

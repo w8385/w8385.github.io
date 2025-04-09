@@ -3,34 +3,27 @@ layout: default
 refactor: true
 ---
 
-<div class="projects-section">
-  <h3><i class="fa-solid fa-mug-hot"></i> Now Serving</h3>
-  <div class="projects-grid">
-    {% for project in site.data.projects.deploying %}
-    <div class="project-card" onclick="window.open('{{ project.link }}', '_blank')">
-      <img alt="{{ project.title }} image" src="{{ project.image }}">
-      <h3>{{ project.title }}</h3>
-    </div>
-    {% endfor %}
-  </div>
+<h3><i class="fa-solid fa-mug-hot"></i> Now Serving</h3>
+<div class="flex-grow-1 px-xl-1" id="project-list-deploying">
+  {% for item in site.data.projects.deploying %}
+  {% include project-entry.html %}
+  {% endfor %}
+</div>
 
-  <h3><i class="fa-solid fa-blender"></i> Brewing</h3>
-  <div class="projects-grid">
-    {% for project in site.data.projects.developing %}
-    <div class="project-card" onclick="window.open('{{ project.link }}', '_blank')">
-      <img alt="{{ project.title }} image" src="{{ project.image }}" style="opacity: 0.5;" url="">
-      <h3>{{ project.title }}</h3>
-    </div>
-    {% endfor %}
-  </div>
+<hr class="my-5"/>
 
-  <h3><i class="fa-solid fa-box-open"></i> Out of Stock</h3>
-  <div class="projects-grid">
-    {% for project in site.data.projects.ended %}
-    <div class="project-card" onclick="window.open('{{ project.link }}', '_blank')">
-      <img alt="{{ project.title }} image" src="{{ project.image }}" style="opacity: 0.5;">
-      <h3>{{ project.title }}</h3>
-    </div>
-    {% endfor %}
-  </div>
+<h3><i class="fa-solid fa-blender"></i> Brewing</h3>
+<div class="flex-grow-1 px-xl-1" id="project-list-developing">
+  {% for item in site.data.projects.developing %}
+  {% include project-entry.html %}
+  {% endfor %}
+</div>
+
+<hr class="my-5"/>
+
+<h3><i class="fa-solid fa-box-open"></i> Out of Stock</h3>
+<div class="flex-grow-1 px-xl-1" id="project-list-ended">
+  {% for item in site.data.projects.ended %}
+  {% include project-entry.html %}
+  {% endfor %}
 </div>
