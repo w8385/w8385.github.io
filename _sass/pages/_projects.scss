@@ -1,0 +1,86 @@
+.project-entry {
+  background-color: #1a1a1a;
+  border: 1px solid #444;
+  border-radius: 0.75rem;
+  min-height: 150px;
+}
+
+.project-img-wrapper {
+  flex: 0 0 auto;
+  width: 120px;
+  height: 120px;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.project-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+}
+
+.project-title {
+  margin: 1rem 0;
+  font-size: 1.25rem;
+  color: #eee;
+}
+
+.project-overview {
+  font-size: 1rem;
+  color: #bbb;
+}
+
+.project-links a {
+  color: #bbb;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+}
+
+.project-links a:hover {
+  color: #fff;
+}
+
+.toggle-button {
+  background: none;
+  border: none;
+  color: #ccc;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.toggle-button:hover {
+  color: #fff;
+}
+
+.toggle-button i {
+  transition: transform 0.3s ease;
+}
+
+.toggle-button.open i {
+  transform: rotate(90deg);
+}
+
+.details-wrapper {
+  overflow: hidden;
+  height: 0;
+  transition: height 0.3s ease;
+}
+
+.project-details {
+  width: 100%;
+  color: #ccc; /* 이건 글씨 잘 보이게 추가 */
+}
+
+.tech-icon {
+  width: 22px;
+  height: 22px;
+  //opacity: 0.8;
+  //transition: transform 0.2s ease;
+}
+
+.tech-icon:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
