@@ -39,8 +39,7 @@ html {
 
 body {
   background: var(--main-bg);
-  padding: env(safe-area-inset-top) env(safe-area-inset-right)
-    env(safe-area-inset-bottom) env(safe-area-inset-left);
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
   color: var(--text-color);
   -webkit-font-smoothing: antialiased;
   font-family: v.$font-family-base;
@@ -206,7 +205,9 @@ main {
       margin: 0 0.5rem 0.2rem -1.3rem;
       vertical-align: middle;
     }
-  } /* ul */
+  }
+
+  /* ul */
 
   dl > dd {
     margin-left: 1rem;
@@ -221,7 +222,9 @@ main {
       min-width: 70%;
     }
   }
-} /* .content */
+}
+
+/* .content */
 
 .tag:hover {
   @extend %tag-hover;
@@ -246,46 +249,46 @@ main {
   border-radius: 10px !important;
 }
 
-.img-link {
-  color: transparent;
-  display: inline-flex;
-}
+//.img-link {
+//  color: transparent;
+//  display: inline-flex;
+//}
 
-.shimmer {
-  overflow: hidden;
-  position: relative;
-  background: var(--img-bg);
-
-  &::before {
-    content: '';
-    position: absolute;
-    background: var(--shimmer-bg);
-    height: 100%;
-    width: 100%;
-    -webkit-animation: shimmer 1.3s infinite;
-    animation: shimmer 1.3s infinite;
-  }
-
-  @-webkit-keyframes shimmer {
-    0% {
-      transform: translateX(-100%);
-    }
-
-    100% {
-      transform: translateX(100%);
-    }
-  }
-
-  @keyframes shimmer {
-    0% {
-      transform: translateX(-100%);
-    }
-
-    100% {
-      transform: translateX(100%);
-    }
-  }
-}
+//.shimmer {
+//  overflow: hidden;
+//  position: relative;
+//  background: var(--img-bg);
+//
+//  &::before {
+//    content: '';
+//    position: absolute;
+//    background: var(--shimmer-bg);
+//    height: 100%;
+//    width: 100%;
+//    -webkit-animation: shimmer 1.3s infinite;
+//    animation: shimmer 1.3s infinite;
+//  }
+//
+//  @-webkit-keyframes shimmer {
+//    0% {
+//      transform: translateX(-100%);
+//    }
+//
+//    100% {
+//      transform: translateX(100%);
+//    }
+//  }
+//
+//  @keyframes shimmer {
+//    0% {
+//      transform: translateX(-100%);
+//    }
+//
+//    100% {
+//      transform: translateX(100%);
+//    }
+//  }
+//}
 
 .embed-video {
   width: 100%;

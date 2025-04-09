@@ -1,0 +1,30 @@
+deploying:
+  - title: My.solved
+    link: https://my-solved.github.io
+    image: /assets/img/projects/mysolved.png
+
+developing:
+  - title: Code Poker
+    link: https://github.com/Code-Poker
+    image: /assets/img/projects/codepoker.png
+
+  - title: Poké Bowl
+    link: https://github.com/w8385/poke-bowl
+    image: /assets/img/projects/poke-bowl.png
+
+  - title: bibimbap
+    link: https://github.com/Bibimbap-Team
+    image: /assets/img/projects/bibimbap.png
+
+ended:
+  - title: DF CAT
+    link: https://github.com/DF-CAT
+    image: /assets/img/projects/dfcat.png
+
+  - title: 숏과외
+    link: https://github.com/amicably-until-the-end
+    image: /assets/img/projects/shorttutoring.png
+
+  - title: sumtime
+    link: https://github.com/bo-an-bo
+    image: /assets/img/projects/sumtime.jpg
