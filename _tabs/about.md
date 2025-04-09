@@ -6,9 +6,7 @@ order: 4
 
 # 박근형
 
-수학 · 컴퓨터 · 보안 애호가  
-[<i class="fab fa-github"></i> GitHub](https://github.com/w8385) [<i class="fab fa-instagram"></i> Instagram](https://instagram.com/w8385_) [<i class="fa-solid fa-envelope"></i> Email](mailto:me@w8385.dev)   
-[<i class="fas fa-code"></i> solved.ac](https://solved.ac/profile/w8385) [<i class="fa-brands fa-discord"></i> discord](https://discord.com/users/308197808052371457)
+수학 · 컴퓨터 · 보안 애호가
 
 ---
 
