@@ -13,7 +13,7 @@
             <!--프로젝트 제목-->
             <h5 class="me-2">{{ item.title }}</h5>
             <!-- 프로젝트 진행 날짜 -->
-            <span class="text-muted small d-none d-md-block">{{ item.started }} ~ {{ item.ended }}</span>
+            <span class="project-info text-muted small ">{{ item.started }} ~ {{ item.ended }}</span>
           </div>
 
           <button class="toggle-button" onclick="toggleDetails(this)">
@@ -29,15 +29,16 @@
             {% if item.repo %}
             <a class="d-flex align-items-center me-2" href="{{ item.repo }}" target="_blank" title="View Repository">
               <i class="fab fa-github me-1"></i>
-              <div class="d-none d-md-block small">{{ item.repo | replace: "https://github.com/", "" }}</div>
+              <span class="project-info small">{{ item.repo | replace: "https://github.com/", "" }}</span>
             </a>
             {% endif %}
 
             {% if item.link %}
             <a class="d-flex align-items-center me-2" href="{{ item.link }}" target="_blank" title="View Site">
               <i class="fas fa-globe me-1"></i>
-              <div class="d-none d-md-block small">{{ item.link | replace: "https://", "" | replace: "http://", "" }}
-              </div>
+              <span
+                class="project-info small">{{ item.link | replace: "https://", "" | replace: "http://", "" }}
+              </span>
             </a>
             {% endif %}
           </div>

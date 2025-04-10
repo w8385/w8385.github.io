@@ -1,6 +1,5 @@
 @use '../abstracts/variables' as v;
 @use '../abstracts/breakpoints' as bp;
-@use '../abstracts/mixins' as mx;
 @use '../abstracts/placeholders';
 
 .project-entry {
@@ -44,6 +43,14 @@
 
 .project-links a:hover {
   color: #fff;
+}
+
+.project-info {
+  display: none;
+
+  @include bp.md() {
+    display: flex;
+  }
 }
 
 .toggle-button {
@@ -93,3 +100,4 @@
   opacity: 1;
   transform: scale(1.1);
 }
+
