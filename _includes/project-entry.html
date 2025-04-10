@@ -1,7 +1,7 @@
 <article class="project-entry card mb-3">
   <!-- 상단: 이미지 + 정보 -->
   <div class="top-section d-flex flex-row flex-wrap align-items-stretch">
-    <div class="project-card d-flex flex-row flex-grow-1">
+    <div class="project-card d-flex flex-row flex-grow-1 align-items-center">
       <div class="project-img-wrapper">
         <img alt="{{ item.title }}" class="project-img" src="{{ item.image }}"/>
       </div>
@@ -10,8 +10,10 @@
         <!-- 프로젝트 제목 + 개요 -->
         <div class="d-flex justify-content-between align-items-end">
           <div class="d-flex">
+            <!--프로젝트 제목-->
             <h5 class="me-2">{{ item.title }}</h5>
-            <span class="text-muted small">{{ item.started }} ~ {{ item.ended }}</span>
+            <!-- 프로젝트 진행 날짜 -->
+            <span class="text-muted small d-none d-md-block">{{ item.started }} ~ {{ item.ended }}</span>
           </div>
 
           <button class="toggle-button" onclick="toggleDetails(this)">
@@ -19,21 +21,23 @@
           </button>
         </div>
 
-        <p class="project-overview">{{ item.overview }}</p>
+        <p class="project-overview" style="font-size:0.875rem"> {{ item.overview }} </p>
 
         <div class="project-links d-flex align-items-center justify-content-between">
           <!-- 왼쪽: 링크 아이콘들 -->
           <div class="d-flex align-items-center">
             {% if item.repo %}
-            <a class="me-2" href="{{ item.repo }}" target="_blank" title="View Repository"><i
-              class="fab fa-github"></i> {{ item.repo | replace: "https://github.com/", "" }}
+            <a class="d-flex align-items-center me-2" href="{{ item.repo }}" target="_blank" title="View Repository">
+              <i class="fab fa-github me-1"></i>
+              <div class="d-none d-md-block small">{{ item.repo | replace: "https://github.com/", "" }}</div>
             </a>
             {% endif %}
 
             {% if item.link %}
-            <a class="me-2" href="{{ item.link }}" target="_blank" title="View Site"><i
-              class="fas fa-globe"></i>
-              {{ item.link | replace: "https://", "" | replace: "http://", "" }}
+            <a class="d-flex align-items-center me-2" href="{{ item.link }}" target="_blank" title="View Site">
+              <i class="fas fa-globe me-1"></i>
+              <div class="d-none d-md-block small">{{ item.link | replace: "https://", "" | replace: "http://", "" }}
+              </div>
             </a>
             {% endif %}
           </div>
