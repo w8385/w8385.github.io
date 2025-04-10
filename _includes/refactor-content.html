@@ -8,12 +8,12 @@
 -->
 
 {% if _content contains '<table' %}
-  {% assign _content = _content
-    | replace: '<table', '<div class="table-wrapper"><table'
-    | replace: '</table>', '</table></div>'
-    | replace: '<code><div class="table-wrapper">', '<code>'
-    | replace: '</table></div></code>', '</table></code>'
-  %}
+{% assign _content = _content
+| replace: '<table', '<div class="table-wrapper"><table'
+  | replace: '</table>', '</table></div>'
+| replace: '<code><div class="table-wrapper">', '<code>'
+  | replace: '</table></div></code>', '</table></code>'
+%}
 {% endif %}
 
 <!--
@@ -29,7 +29,7 @@
   %}
 {% endif %}
 
-<!-- Change the icon of checkbox -->
+  <!-- Change the icon of checkbox -->
 
 {% if _content contains '<input type="checkbox"' %}
   {% assign _content = _content
@@ -40,7 +40,7 @@
   %}
 {% endif %}
 
-<!-- Handle images -->
+  <!-- Handle images -->
 
 {% assign IMG_TAG = '<img ' %}
 
@@ -87,7 +87,7 @@
       {% endcase %}
     {% endfor %}
 
-    <!-- take out classes -->
+  <!-- take out classes -->
     {% if _class %}
       {% capture _old_class %}class="{{ _class }}"{% endcapture %}
       {% assign _left = _left | remove: _old_class %}
@@ -117,31 +117,31 @@
         {% assign _left = _left | replace: 'lqip="', _lqip_alt %}
       {% endunless %}
 
-      <!-- add image placeholder -->
+  <!-- add image placeholder -->
       {% assign _left = _left | replace: 'src=', 'data-src=' | replace: ' lqip=', ' data-lqip="true" src=' %}
 
     {% else %}
       {% assign _class = _class | append: ' shimmer' %}
     {% endif %}
 
-    <!-- lazy-load images -->
+  <!-- lazy-load images -->
     {% if _lazyload %}
       {% assign _left = _left | append: ' loading="lazy"' %}
     {% endif %}
 
     {% if page.layout == 'home' %}
-      <!-- create the image wrapper -->
+  <!-- create the image wrapper -->
       {% assign _wrapper_start = '<div class="preview-img ' | append: _class | append: '">' %}
 
       {% assign _img_content = _img_content | append: _wrapper_start %}
       {% assign _right = _right | prepend: '></div' %}
 
     {% else %}
-      <!-- make sure the `<img>` is wrapped by `<a>` -->
-      {% assign _parent = _right | slice: 1, 4 %}
+    <!-- make sure the `<img>` is wrapped by `<a>` -->
+    {% assign _parent = _right | slice: 1, 4 %}
 
       {% if _parent == '</a>' %}
-        <!-- add class to exist <a> tag -->
+  <!-- add class to exist <a> tag -->
         {% assign _size = _img_content | size | minus: 1 %}
         {% capture _class %}
           class="img-link{% unless _lqip %} shimmer{% endunless %}"
@@ -149,17 +149,17 @@
         {% assign _img_content = _img_content | slice: 0, _size | append: _class | append: '>' %}
 
       {% else %}
-        <!-- create the image wrapper -->
-<!--        {% assign _wrapper_start = _final_src-->
-<!--          | default: _src-->
-<!--          | prepend: '<a href="'-->
-<!--          | append: '" class="popup img-link '-->
-<!--          | append: _class-->
-<!--          | append: '">'-->
-<!--        %}-->
+  <!-- create the image wrapper -->
+        {% assign _wrapper_start = _final_src
+          | default: _src
+          | prepend: '<a href="'
+          | append: '" class="popup img-link '
+          | append: _class
+          | append: '">'
+        %}
 
-<!--        {% assign _img_content = _img_content | append: _wrapper_start %}-->
-<!--        {% assign _right = '></a' | append: _right %}-->
+        {% assign _img_content = _img_content | append: _wrapper_start %}
+        {% assign _right = '></a' | append: _right %}
       {% endif %}
     {% endif %}
 
@@ -172,9 +172,9 @@
   {% endif %}
 {% endif %}
 
-<!-- Add header for code snippets -->
+    <!-- Add header for code snippets -->
 
-{% if _content contains '<div class="highlight"><code>' %}
+    {% if _content contains '<div class="highlight"><code>' %}
   {% assign _code_spippets = _content | split: '<div class="highlight"><code>' %}
   {% assign _new_content = '' %}
 
@@ -213,7 +213,7 @@
   {% assign _content = _new_content %}
 {% endif %}
 
-<!-- Create heading anchors -->
+        <!-- Create heading anchors -->
 
 {% assign heading_levels = '2,3,4,5' | split: ',' %}
 {% assign _heading_content = _content %}
@@ -251,5 +251,5 @@
 
 {% assign _content = _heading_content %}
 
-<!-- return -->
+        <!-- return -->
 {{ _content }}
