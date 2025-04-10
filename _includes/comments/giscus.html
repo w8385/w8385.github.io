@@ -2,7 +2,6 @@
 <script>
   (function () {
     const themeMapper = Theme.getThemeMapper('light', 'dark_dimmed');
-    const initTheme = themeMapper[Theme.visualState];
 
     let lang = '{{ site.comments.giscus.lang | default: lang }}';
     {%- comment -%} https://github.com/giscus/giscus/tree/main/locales {%- endcomment -%}
@@ -20,7 +19,7 @@
       'data-strict' : '{{ site.comments.giscus.strict | default: '0' }}',
       'data-reactions-enabled': '{{ site.comments.giscus.reactions_enabled | default: '1' }}',
       'data-emit-metadata': '0',
-      'data-theme': initTheme,
+      'data-theme': 'noborder_gray',
       'data-input-position': '{{ site.comments.giscus.input_position | default: 'bottom' }}',
       'data-lang': lang,
       'data-loading': 'lazy',
