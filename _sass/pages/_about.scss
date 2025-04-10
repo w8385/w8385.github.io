@@ -1,0 +1,18 @@
+@use '../abstracts/breakpoints' as bp;
+
+.about-timeline {
+  display: none;
+  @include bp.sm {
+    display: inline-block;
+    font-size: small;
+    margin-left: 0.5rem;
+  }
+}
+
+.indented {
+  margin-left: 1rem;
+}
+
+.fa-up-right-from-square {
+  font-size: medium;
+}
