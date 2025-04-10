@@ -1,3 +1,8 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/breakpoints' as bp;
+@use '../abstracts/mixins' as mx;
+@use '../abstracts/placeholders';
+
 .project-entry {
   background-color: #1a1a1a;
   border: 1px solid #444;
