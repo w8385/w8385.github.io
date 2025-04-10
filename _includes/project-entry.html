@@ -65,9 +65,9 @@
 
   <!-- 구분선 + 설명 -->
   <div class="details-wrapper">
-    <hr style="margin: 0"/>
+    <hr style="margin: 0; padding: 0; width: 100%;"/>
     <div class="project-details">
-      <p style="margin-right:2rem;">{{ item.description }}</p>
+      {{ post.content | markdownify }}
     </div>
   </div>
 </article>

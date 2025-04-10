@@ -2,9 +2,11 @@
 layout: page
 ---
 
+
 <h3><i class="fa-solid fa-mug-hot"></i> Now Serving</h3>
 <div class="flex-grow-1" id="project-list-deploying">
   {% for item in site.data.projects.deploying %}
+  {% assign post = site.posts | where: "name", item.description | first %}
   {% include project-entry.html %}
   {% endfor %}
 </div>
@@ -14,6 +16,7 @@ layout: page
 <h3><i class="fa-solid fa-blender"></i> Brewing</h3>
 <div class="flex-grow-1" id="project-list-developing">
   {% for item in site.data.projects.developing %}
+  {% assign post = site.posts | where: "name", item.description | first %}
   {% include project-entry.html %}
   {% endfor %}
 </div>
@@ -23,6 +26,7 @@ layout: page
 <h3><i class="fa-solid fa-box-open"></i> Out of Stock</h3>
 <div class="flex-grow-1" id="project-list-ended">
   {% for item in site.data.projects.ended %}
+  {% assign post = site.posts | where: "name", item.description | first %}
   {% include project-entry.html %}
   {% endfor %}
 </div>
