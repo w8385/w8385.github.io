@@ -15,7 +15,8 @@
   width: 120px;
   height: 120px;
   overflow: hidden;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
+  margin-right: 1rem;
 }
 
 .project-img {
@@ -68,14 +69,20 @@
 
 .details-wrapper {
   overflow: hidden;
-  height: 0;
   transition: height 0.3s ease;
+  height: 0;
 }
 
 .project-details {
   width: 100%;
   color: #ccc;
+  margin: 1rem;
 }
+
+.project-card {
+  padding: 1rem;
+}
+
 
 .tech-icon {
   width: 22px;

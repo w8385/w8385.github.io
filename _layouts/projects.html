@@ -3,25 +3,25 @@ layout: page
 ---
 
 <h3><i class="fa-solid fa-mug-hot"></i> Now Serving</h3>
-<div class="flex-grow-1 px-xl-1" id="project-list-deploying">
+<div class="flex-grow-1" id="project-list-deploying">
   {% for item in site.data.projects.deploying %}
   {% include project-entry.html %}
   {% endfor %}
 </div>
 
-<hr class="my-5"/>
+<hr class="my-4"/>
 
 <h3><i class="fa-solid fa-blender"></i> Brewing</h3>
-<div class="flex-grow-1 px-xl-1" id="project-list-developing">
+<div class="flex-grow-1" id="project-list-developing">
   {% for item in site.data.projects.developing %}
   {% include project-entry.html %}
   {% endfor %}
 </div>
 
-<hr class="my-5"/>
+<hr class="my-4"/>
 
 <h3><i class="fa-solid fa-box-open"></i> Out of Stock</h3>
-<div class="flex-grow-1 px-xl-1" id="project-list-ended">
+<div class="flex-grow-1" id="project-list-ended">
   {% for item in site.data.projects.ended %}
   {% include project-entry.html %}
   {% endfor %}

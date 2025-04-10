@@ -1,63 +1,68 @@
-<article class="project-entry card p-3 mb-3">
+<article class="project-entry card mb-3">
   <!-- 상단: 이미지 + 정보 -->
   <div class="top-section d-flex flex-row flex-wrap align-items-stretch">
-    <div class="project-img-wrapper me-3 mb-2">
-      <img alt="{{ item.title }}" class="project-img" src="{{ item.image }}"/>
-    </div>
-
-    <div class="project-meta d-flex flex-column" style="flex: 1 1 auto;">
-      <!-- 프로젝트 제목 + 개요 -->
-      <div class="d-flex justify-content-between align-items-start">
-        <div class="d-flex align-items-center gap-2 mt-2">
-          <h5 class="mb-1">{{ item.title }}</h5>
-          <span class="text-muted small">{{ item.started }} ~ {{ item.ended }}</span>
-        </div>
-
-        <button class="toggle-button" onclick="toggleDetails(this)">
-          <i class="fas fa-chevron-down"></i>
-        </button>
+    <div class="project-card d-flex flex-row flex-grow-1">
+      <div class="project-img-wrapper">
+        <img alt="{{ item.title }}" class="project-img" src="{{ item.image }}"/>
       </div>
-      <p class="project-overview mb-0">{{ item.overview }}</p>
 
-      <div class="project-links mt-auto pt-1 mb-2 d-flex align-items-center justify-content-between">
-        <!-- 왼쪽: 링크 아이콘들 -->
-        <div class="d-flex align-items-center">
-          {% if item.repo %}
-          <a class="me-2" href="{{ item.repo }}" target="_blank" title="View Repository"><i
-            class="fab fa-github"></i> {{ item.repo | replace: "https://github.com/", "" }}
-          </a>
-          {% endif %}
+      <div class="project-meta d-flex flex-column" style="flex: 1 1 auto;">
+        <!-- 프로젝트 제목 + 개요 -->
+        <div class="d-flex justify-content-between align-items-end">
+          <div class="d-flex">
+            <h5 class="me-2">{{ item.title }}</h5>
+            <span class="text-muted small">{{ item.started }} ~ {{ item.ended }}</span>
+          </div>
 
-          {% if item.link %}
-          <a class="me-2" href="{{ item.link }}" target="_blank" title="View Site"><i
-            class="fas fa-globe"></i>
-            {{ item.link | replace: "https://", "" | replace: "http://", "" }}
-          </a>
+          <button class="toggle-button" onclick="toggleDetails(this)">
+            <i class="fas fa-chevron-down"></i>
+          </button>
+        </div>
+
+        <p class="project-overview">{{ item.overview }}</p>
+
+        <div class="project-links d-flex align-items-center justify-content-between">
+          <!-- 왼쪽: 링크 아이콘들 -->
+          <div class="d-flex align-items-center">
+            {% if item.repo %}
+            <a class="me-2" href="{{ item.repo }}" target="_blank" title="View Repository"><i
+              class="fab fa-github"></i> {{ item.repo | replace: "https://github.com/", "" }}
+            </a>
+            {% endif %}
+
+            {% if item.link %}
+            <a class="me-2" href="{{ item.link }}" target="_blank" title="View Site"><i
+              class="fas fa-globe"></i>
+              {{ item.link | replace: "https://", "" | replace: "http://", "" }}
+            </a>
+            {% endif %}
+          </div>
+
+          <!-- 오른쪽: 기술 스택 아이콘 -->
+          {% if item.techs %}
+          <div class="d-flex align-items-center">
+            {% for tech in item.techs %}
+            <img
+              alt="{{ tech }}"
+              class="tech-icon"
+              src="/assets/img/techicons/{{ tech }}.png"
+              style="margin-right: 5px;"
+              title="{{ tech }}"
+            />
+            {% endfor %}
+          </div>
           {% endif %}
         </div>
 
-        <!-- 오른쪽: 기술 스택 아이콘 -->
-        {% if item.techs %}
-        <div class="d-flex align-items-center gap-2">
-          {% for tech in item.techs %}
-          <img
-            alt="{{ tech }}"
-            class="tech-icon"
-            src="/assets/img/techicons/{{ tech }}.png"
-            title="{{ tech }}"
-          />
-          {% endfor %}
-        </div>
-        {% endif %}
       </div>
     </div>
   </div>
 
   <!-- 구분선 + 설명 -->
-  <div class="details-wrapper" style="overflow: hidden; height: 0; transition: height 0.3s ease;">
-    <hr/>
-    <div class="project-details pt-2">
-      <p class="mb-0">{{ item.description }}</p>
+  <div class="details-wrapper">
+    <hr style="margin: 0"/>
+    <div class="project-details">
+      <p style="margin-right:2rem;">{{ item.description }}</p>
     </div>
   </div>
 </article>
