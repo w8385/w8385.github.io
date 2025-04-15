@@ -16,7 +16,7 @@ timezone: Asia/Seoul
 
 title: w8385 # the main title
 
-tagline: Bar Cafe Cinema # it will display as the subtitle
+tagline: Bar Café Cinema # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
   w8385's blog
@@ -27,9 +27,6 @@ url: "https://w8385.dev"
 
 github:
   username: w8385 # change to your GitHub username
-
-twitter:
-  username: twitter_username # change to your Twitter username
 
 social:
   # Change to your full name.
