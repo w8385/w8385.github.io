@@ -46,10 +46,10 @@
 }
 
 .project-info {
-  display: none;
+  display: flex;
 
-  @include bp.md() {
-    display: flex;
+  @include bp.lte(1350px) {
+    display: none;
   }
 }
 
@@ -80,10 +80,13 @@
   height: 0;
 }
 
-.project-details {
+.markdown-body {
+  box-sizing: border-box;
   width: 100%;
-  color: #ccc;
-  padding: 1rem;
+  background-color: #1b1b1e !important;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
 }
 
 .project-card {

@@ -33,6 +33,21 @@
             </a>
             {% endif %}
 
+            {% if item.appstore %}
+            <a class="d-flex align-items-center me-2" href="{{ item.appstore }}" target="_blank" title="View App Store">
+              <i class="fa-brands fa-app-store me-1"></i>
+              <span class="project-info small">App Store</span>
+            </a>
+            {% endif %}
+
+            {% if item.playstore %}
+            <a class="d-flex align-items-center me-2" href="{{ item.playstore }}" target="_blank"
+               title="View Play Store">
+              <i class="fa-brands fa-google-play"></i>
+              <span class="project-info small">Play Store</span>
+            </a>
+            {% endif %}
+
             {% if item.link %}
             <a class="d-flex align-items-center me-2" href="{{ item.link }}" target="_blank" title="View Site">
               <i class="fas fa-globe me-1"></i>
@@ -66,7 +81,7 @@
   <!-- 구분선 + 설명 -->
   <div class="details-wrapper">
     <hr style="margin: 0; padding: 0; width: 100%;"/>
-    <div class="project-details">
+    <div class="markdown-body">
       {{ post.content | markdownify }}
     </div>
   </div>

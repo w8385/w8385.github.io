@@ -15,7 +15,10 @@ resource_hints:
       - rel: dns-prefetch
 
 # Web Fonts
-webfonts: https://cdn.jsdelivr.net/npm/pretendard@latest/dist/web/variable/pretendardvariable-dynamic-subset.css
+webfonts:
+  https://cdn.jsdelivr.net/npm/pretendard@latest/dist/web/variable/pretendardvariable-dynamic-subset.css
+  https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap
+
 
 # Libraries
 

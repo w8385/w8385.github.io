@@ -5,6 +5,8 @@ deploying:
     image: /assets/img/projects/mysolved.png
     link: https://my-solved.github.io
     repo: https://github.com/My-solved/My.solved
+    appstore: https://apps.apple.com/kr/app/my-solved/id6444540009
+    playstore: https://play.google.com/store/apps/details?id=com.w8385.my_solved
 
     techs:
       - Flutter
