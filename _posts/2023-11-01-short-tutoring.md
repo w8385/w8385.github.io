@@ -5,24 +5,43 @@ categories: [ Project ]
 tags: [ SWM, NestJS ]
 ---
 
-## Short Tutoring
+멘토와 멘티 간 실시간 화상 과외를 지원하는 플랫폼으로, 질문 생성부터 과외 시작, 수업 자료 공유까지의 전 과정을 관리할 수 있는 시스템입니다. 실시간 영상 통신과 강의자료 업로드 기능을 포함하여, 원격에서도
+원활한 소통을 가능하게 합니다.
 
-Lorem ipsum dolor sit amet, modulus et exponentiation consectetur. Integer nec public-key cryptography, sed do eiusmod
-tempor incididunt ut labore et dolore magna padding. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-nisi ut aliquip ex ea asymmetric encryption commodo.
+## 개발 동기
 
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+단순한 Q&A 게시판 형식의 멘토링은 실시간 상호작용이 어렵다는 한계를 느꼈고, 멘토링의 질을 높이기 위해 실시간 과외 형태의 플랫폼이 필요하다고 판단했습니다.
 
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
-eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Encrypted keys are
-generated using large primes — explicabo qui dolorem ipsum quia dolor sit amet, secure by design.
+## 주요 기능
 
-At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium private keys corrupti quos dolores
-et quas molestias excepturi sint occaecati cupiditate non provident. Similique sunt in culpa qui officia deserunt
-mollitia animi, id est laborum et dolorum fuga.
+- 실시간 화상 과외 세션 생성 및 참여
+- 멘티의 질문 등록 및 매칭
+- 수업 자료 업로드 및 공유
+- 과외 기록 확인 기능
 
-Et harum quidem rerum facilis est et distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil
-impedit quo minus id quod mod n maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
-Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae
-sint et molestiae non recusandae.
+## 사용 기술
+
+- NestJS
+
+## 맡은 역할
+
+- 일정 조율 및 코드 리뷰 주도
+- NestJS 백엔드 서버 개발
+  - 실시간 영상 채널 로직 구성
+  - Kakao OAuth 연동
+- AWS 기반 인프라 구축 및 운영
+
+## 겪은 어려움
+
+- 다중 인스턴스 환경에서 실시간 채널 정보 동기화 문제
+- Redis Pub/Sub을 활용한 안정적인 데이터 전달 구현
+
+## 배운 점
+
+- 팀 리딩과 커뮤니케이션의 중요성
+- 분산 환경에서의 실시간 데이터 처리 방식
+- 클라우드 인프라 설계와 운영 실무 경험
+
+## 관련 링크
+
+- <i class="fa-brands fa-github" style="width: 1rem; margin-right: 5px"></i> [깃허브 조직](https://github.com/amicably-until-the-end)
