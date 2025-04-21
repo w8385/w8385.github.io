@@ -3,26 +3,43 @@ title: Code Poker
 author: w8385
 categories: [ Project ]
 tags: [ SSU, NestJS ]
+date: 2024-04-01 +0900
 ---
 
-## CP
+보드 게임을 진행하면서 잃은 점수만큼 알고리즘 문제를 해결하는 모임을 주도하였습니다. 겨울방학 동안 교내 알고리즘 소모임 활동의 일환으로 운영되었으며, 게임 형식을 빌려 PS 학습을 재미있게 할 수 있도록
+구성하였습니다.
 
-Lorem ipsum dolor sit amet, modulus et exponentiation consectetur. Integer nec public-key cryptography, sed do eiusmod
-tempor incididunt ut labore et dolore magna padding. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-nisi ut aliquip ex ea asymmetric encryption commodo.
+## 개발 동기
 
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+단순히 문제만 푸는 것에서 벗어나, 소모임의 참여도와 재미를 높일 수 있는 방식이 필요했습니다. 보드게임 요소를 더해 참여자들의 몰입도를 높이고, 문제 풀이를 자연스럽게 유도할 수 있는 시스템을 만들고자 했습니다.
 
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
-eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Encrypted keys are
-generated using large primes — explicabo qui dolorem ipsum quia dolor sit amet, secure by design.
+## 주요 기능
 
-At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium private keys corrupti quos dolores
-et quas molestias excepturi sint occaecati cupiditate non provident. Similique sunt in culpa qui officia deserunt
-mollitia animi, id est laborum et dolorum fuga.
+- 알고리즘 문제 풀이 데이터 자동 수집
+- 참여자별 점수 계산 및 랭킹 표시
+- Redis 기반 캐싱으로 실시간 점수 반영
 
-Et harum quidem rerum facilis est et distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil
-impedit quo minus id quod mod n maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
-Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae
-sint et molestiae non recusandae.
+## 사용 기술
+
+- NestJS
+- Redis
+
+## 맡은 역할
+
+- NestJS API 서버 개발
+  - 문제 풀이 현황 수집 및 점수 계산 로직 개발
+  - Redis를 활용한 점수 캐싱 및 상태 관리
+
+## 겪은 어려움
+
+- BOJ에서 문제 풀이 데이터를 수집하는 오버헤드를 줄여야 했습니다.
+- 점수 계산 로직을 참여자의 활동에 따라 실시간 반영하는 데 캐시 갱신 전략이 중요했습니다.
+
+## 배운 점
+
+- 단순한 학습 활동도 재미 요소를 더하면 참여도가 크게 오를 수 있다는 점
+- 실시간 데이터를 처리하는 캐시 구조 설계와 성능 개선 방법
+
+## 관련 링크
+
+- <i class="fa-brands fa-github" style="width: 1rem; margin-right: 5px"></i> [깃허브 조직](https://github.com/Code-Poker)
